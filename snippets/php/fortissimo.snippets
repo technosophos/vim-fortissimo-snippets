@@ -1,0 +1,41 @@
+# Fortissimo shortcuts
+snippet fcommand
+	<?php
+	namespace ${1:MyApp}
+	
+	/**
+	 * A Fortissimo command.
+	 *
+	 * Params:
+	 * - name (type): description
+	 */
+	class `Filename()` extends \Fortissimo\Command\Base {
+		public function expects() {
+			return $this
+				->description(${3})
+				//->usesParam('name', 'description')
+				//->withFilter('filtername')
+				//->whichIsRequired()
+				//->whichHasDefault()
+				//->usesParam('name2', 'desc2')
+				// ...
+				->andReturns(${4})
+			;
+		}
+
+		public function doesCommand() {
+			//$name = $this->param('name', 'default);	
+
+		}
+	}
+
+snippet ->usesGroup
+	->usesGroup('${1:name}')
+snippet ->using
+	->using('${1:param}', ${2:NULL})
+snippet ->from
+	->from('${1:cxt}')
+snippet ->does
+	->does('${1:\Path}', '${2:name}')
+snippet ->group
+	->group('${1:name}')
