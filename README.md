@@ -8,6 +8,13 @@ Fortissimo code.
 Clone this repo into whatever dorectory you normally install plugins
 into. In Janus, they go in `~/.janus`
 
+#### Janus
+
+```
+$ cd ~/.janus
+$ git clone git@github.com:technosophos/vim-fortissimo-snippets.git fortissimo-snippets.after
+```
+
 ## Usage
 
 To create a new command:
