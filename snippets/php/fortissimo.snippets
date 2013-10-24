@@ -28,7 +28,25 @@ snippet fcommand
 
 		}
 	}
-
+# In commands.
+snippet Param
+	$${1:name} = $this->param('${1:name}'${2:,});
+snippet Context
+	$this->context
+snippet Logf
+	$this->context->logf('${1:msg}', '${2:debug}')
+snippet
+snippet ->usesParam
+	->usesParam('${1:name}', '${2:description}')
+snippet ->whichIsRequired
+	->whichIsRequired()
+snippet ->whichHasDefault
+	->whichHasDefault($0)
+snippet ->withFilter
+	->withFilter('${1:int}')
+# For routes.
+snippet ->route
+	->route('${1:name}')
 snippet ->usesGroup
 	->usesGroup('${1:name}')
 snippet ->using
@@ -39,3 +57,7 @@ snippet ->does
 	->does('${1:\Path}', '${2:name}')
 snippet ->group
 	->group('${1:name}')
+snippet ->logger
+	->logger('${1:name}')
+		->does('${2:class}')
+		->using($0)
